@@ -1,0 +1,12 @@
+{
+  "singleQuote": true,
+  "semi": false,
+  "svelteIndentScriptAndStyle": false,
+  "printWidth": 100,
+  "plugins": [
+    "prettier-plugin-svelte",
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
+  "overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
+}

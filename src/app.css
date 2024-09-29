@@ -1,0 +1,28 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* GLOBAL STYLES */
+*,
+*:before,
+*:after {
+  line-height: 1.45;
+  font-family: 'Inter var', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+#root {
+  /*
+    Create a stacking context, without a z-index.
+    This ensures that all portal content (modals and tooltips) will
+    float above the app.
+  */
+  isolation: isolate;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
