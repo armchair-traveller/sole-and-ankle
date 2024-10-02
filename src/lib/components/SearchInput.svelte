@@ -10,7 +10,7 @@ let { label, class: className, ...delegated } = $props()
   <VisuallyHidden>Search</VisuallyHidden>
   <input
     class={twMerge(
-      'border-b border-none border-b-gray-300 bg-transparent pl-6 text-sm text-gray-100 outline-offset-4 placeholder:text-gray-500',
+      'border-b border-b-gray-300 bg-transparent pl-6 text-sm leading-normal text-gray-100 outline-offset-4 placeholder:text-gray-500',
       className,
     )}
     {...delegated}
