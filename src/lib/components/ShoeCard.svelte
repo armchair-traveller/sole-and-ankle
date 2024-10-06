@@ -21,7 +21,7 @@ const variant = typeof salePrice === 'number'
       : 'default'
 </script>
 
-<a class="" href="/shoe/{slug}">
+<a class="basis-[32%]" href="/shoe/{slug}">
   <article class="">
     <div class="relative">
       <img class="" alt="" src={imageSrc} />
