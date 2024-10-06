@@ -25,19 +25,27 @@ const variant = typeof salePrice === 'number'
   <article class="">
     <div class="relative">
       <img class="" alt="" src={imageSrc} />
+      <!-- Flag -->
+      <small
+        class:hidden={variant == 'default'}
+        class="absolute -right-1 top-3 rounded-sm font-medium {variant == 'on-sale'
+          ? 'bg-primary'
+          : 'bg-secondary'} px-2 py-1.5 text-sm text-white"
+        >{variant == 'new-release' ? 'Just released!' : 'Sale'}
+      </small>
     </div>
     <Spacer size={12} />
     <div>
-      <h3 class="font-medium text-gray-900">{name}</h3>
-      <span class="">{formatPrice(price)}</span>
+      <h3 class="inline font-medium text-gray-900">{name}</h3>
+      <span class="float-right" class:line-through={variant == 'on-sale'}>
+        {formatPrice(price)}
+      </span>
     </div>
     <div>
-      <p class="text-gray-700">{pluralize('Color', numOfColors)}</p>
+      <p class="inline text-gray-700">{pluralize('Color', numOfColors)}</p>
+      <span class="float-right font-medium text-primary" class:hidden={variant != 'on-sale'}>
+        {formatPrice(salePrice)}
+      </span>
     </div>
   </article>
 </a>
-
-<!-- Add props as necessary -->
-{#snippet SalePrice({ ...delegated })}
-  <span class="font-medium text-primary" {...delegated}></span>
-{/snippet}
