@@ -10,7 +10,7 @@ let selectEl = $state(),
   )
 </script>
 
-<label class="">
+<label class="flex items-center">
   <span class="mr-4 text-gray-700">{label}</span>
 
   <div class="relative">
